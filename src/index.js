@@ -45,7 +45,7 @@ client.on('ready', () => {
 
 client.on('guildMemberAdd', member => {
 
-  const channel = member.guild.channels.cache.find(ch => ch.id === '756955213591740547');
+  const channel = member.guild.channels.cache.find(ch => ch.id === config.channels.bienvenidas);
 
   if (!channel) return;
 

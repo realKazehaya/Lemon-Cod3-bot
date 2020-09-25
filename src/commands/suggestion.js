@@ -2,7 +2,7 @@ const {MessageEmbed} = require('discord.js');
 const config = require('../config');
 
 const suggestions = async (msg, args) => {
-    let sChannel = msg.guild.channels.cache.find(x => x.id === "759174827717689394");//where will go the suggestion
+    let sChannel = msg.guild.channels.cache.find(x => x.id === config.channels.sugerencias);//where will go the suggestion
 
     //we say to the user that his message was suscefully sended
     msg.channel
