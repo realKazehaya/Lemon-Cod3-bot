@@ -10,7 +10,7 @@ const suggestions = async (msg, args) => {
     msg.reply("por favor escribe lo que desees sugerir despues del comando");
   } else if (!sChannel) {
     msg.reply("no se puede encontrar el canal para colocar las sugerencias");
-  } else {
+  } else if(args, args !== []){
     //we say to the user that his message was suscefully sended
     msg.channel.send(`la sugerencia esta en <#${config.channels.sugerencias}>`);
     msg
