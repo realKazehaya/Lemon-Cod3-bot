@@ -53,9 +53,9 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
 
   const welcomeEmbed = new MessageEmbed()
-      .setTitle('prueba')
+      .setTitle('BIENVENIDO')
       .setColor('99B8E0')
-      .setDescription(`Bienvenido embed${member}`)
+      .setDescription(`Bienvenido al servidor ${member}`)
 
   channel.send(
     welcomeEmbed
