@@ -22,6 +22,7 @@ const helpCommand = async (msg) => {
         .addField(`${config.bot.prefix}warn @user`, "will warn user mentioned")
         .addField(`${config.bot.prefix}advert`, `send an stylized embed to advert something`)
         .addField(`${config.bot.prefix}clear number`, "will clear the number of messages desired")
+        .addField(`${config.bot.prefix}support`, "will send a message click in the reaction to enter in the new support channel")
     );
   } else {
     await msg.channel.send(

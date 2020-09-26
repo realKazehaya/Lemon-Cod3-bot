@@ -20,6 +20,8 @@ ban: prefix + ban + USER_BANED
 
 warn: prefix + warn + USER_WARNED
 
+support: prefix + support -> you will have to click in the reaction of the asnwer of the bot adn it will mention you to a new support channel
+
 ### example : `$clear 5`
 
 ---

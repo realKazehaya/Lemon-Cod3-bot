@@ -11,6 +11,7 @@ const { warnCommand } = require("./commands/moderation/warn");
 const { advertisments } = require("./commands/advertisement");
 const { helpCommand } = require("./commands/help");
 const { clearCommand } = require("./commands/clear");
+const { supportCommand } = require("./commands/tickets/support");
 
 const client = new Discord.Client();
 
@@ -40,6 +41,9 @@ client.on("message", async (msg) => {
         break;
       case "warn":
         await warnCommand(msg);
+        break;
+      case "support":
+        await supportCommand(msg)
         break;
       case "sugerencia":
         await suggestions(msg, commandArguments);

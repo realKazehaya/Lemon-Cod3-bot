@@ -19,6 +19,10 @@ module.exports  = {
     roles: {
         warning: '759173208045387838',
         admin: '759173208045387838',
-        invitado: '759085567874039909'
+        invitado: '759085567874039909',
+        everyone: '756623887453913119'
+    },
+    categories:{
+        SOPORTE: '759514199847469087'
     }
 }
