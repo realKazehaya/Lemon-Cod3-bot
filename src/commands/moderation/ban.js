@@ -6,28 +6,28 @@ const banCommand = async (msg) => {
     .setAuthor(`${msg.author.username}`, `${msg.author.avatarURL()}`)
     .setTitle("ban")
     .setDescription(
-      `${msg.author} ${userModed} ha sido baneado del servidor`
+      `${msg.author} ${userModed} ha sido baneado de Stackly Code`
     );
   console.log(msg.member.hasPermission("BAN_MEMBERS"));
 
   if (msg.member.hasPermission("BAN_MEMBERS")) {
     if (!userModed) {
-      msg.reply("procura mencionar a la persona que deseas banear");
+      msg.reply("Hey, debes mencionar al usuario que quieres banear!");
     }
     userModed
       .ban()
       .then(() => {
         msg.channel.send(kEmbed);
-        console.log(`${msg.author.tag} ${userModed.tag}  ha sido baneado del servidor`);
+        console.log(`${msg.author.tag} ${userModed.tag}  ha sido baneado de Stackly Code`);
       })
       .catch((err) => {
-        msg.reply(`No se pudo expulsar a el usuario ${userModed}`);
+        msg.reply(`No se pudo banear a el usuario ${userModed}`);
         // Log the error
         console.error(err);
       });
   } else {
     msg.reply(
-      "no tienes permisos suficientes o el usuario al que intentas expulsar no existe"
+      "Hey, no tienes permisos suficientes o el usuario al que intentas banear no existe!"
     );
   }
 };
