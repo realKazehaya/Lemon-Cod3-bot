@@ -5,8 +5,8 @@ const suggestions = async (msg, args) => {
   let sChannel = msg.guild.channels.cache.find(
     (x) => x.id === config.channels.sugerencias
   ); //where will go the suggestion
-
-  if (!args || args === "" || args === " ") {
+  console.log(args)
+  if (!args || args === []) {
     msg.reply("por favor escribe lo que desees sugerir despues del comando");
   } else if (!sChannel) {
     msg.reply("no se puede encontrar el canal para colocar las sugerencias");
