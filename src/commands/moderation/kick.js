@@ -5,7 +5,7 @@ const kickCommand = async (msg) => {
     const kEmbed = new MessageEmbed()
     .setAuthor(`${msg.author.username}`, `${msg.author.avatarURL()}`)
     .setTitle("Kick")
-    .setDescription(`¡ ${msg.author} ${userModed} ha sido baneado del servidor`)
+    .setDescription(`¡ ${msg.author} ${userModed} ha sido echado del servidor`)
     console.log(msg.member.hasPermission('KICK_MEMBERS'))
 
     if(msg.member.hasPermission('KICK_MEMBERS')){
@@ -17,7 +17,7 @@ const kickCommand = async (msg) => {
                 msg.channel.send(
                     kEmbed
                 )
-                console.log(`${msg.author} ${userModed} ha sido echado del servidor`)
+                console.log(`${msg.author.tag} ${userModed.tag} ha sido echado del servidor`)
             }).catch(err => {
                 msg.reply(`No se pudo expulsar a el usuario ${userModed}`);
                 // Log the error

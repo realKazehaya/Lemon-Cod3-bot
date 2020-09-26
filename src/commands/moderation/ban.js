@@ -18,7 +18,7 @@ const banCommand = async (msg) => {
       .ban()
       .then(() => {
         msg.channel.send(kEmbed);
-        console.log(`${msg.author} ${userModed}  ha sido baneado del servidor`);
+        console.log(`${msg.author.tag} ${userModed.tag}  ha sido baneado del servidor`);
       })
       .catch((err) => {
         msg.reply(`No se pudo expulsar a el usuario ${userModed}`);

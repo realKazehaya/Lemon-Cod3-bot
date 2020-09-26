@@ -6,6 +6,8 @@
 ### prefix : $
 <br/>
 
+help: prefix + help (**the asnwer will depend of your permission roles**)
+
 suggestions: prefix + sugerencia + YOUR_SUGGESTION
 
 advert: prefix + advert + YOUR_ADVERT (**just for admins**)
