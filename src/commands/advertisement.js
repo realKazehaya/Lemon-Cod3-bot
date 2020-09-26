@@ -9,6 +9,8 @@ const advertisments = async (msg, args) => {
     .setColor(config.bot.color.primary);
 
   if (msg.member.hasPermission("ADMINISTRATOR")) {
+    msg.delete({timeout: 1000})
+    .catch(console.error)
     if (!args || args.length === 0) {
       msg.reply("por favor escribe lo que desees sugerir despues del comando");
     }
