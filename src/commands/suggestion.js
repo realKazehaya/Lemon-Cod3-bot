@@ -5,12 +5,12 @@ const suggestions = async (msg, args) => {
   let sChannel = msg.guild.channels.cache.find(
     (x) => x.id === config.channels.sugerencias
   ); //where will go the suggestion
-  console.log(args)
-  if (!args || args === []) {
+  console.log(args.lenght)
+  if (!args || args.lenght === 0) {
     msg.reply("por favor escribe lo que desees sugerir despues del comando");
   } else if (!sChannel) {
     msg.reply("no se puede encontrar el canal para colocar las sugerencias");
-  } else if(args, args !== []){
+  } else if(args, args.lenght !== 0){
     //we say to the user that his message was suscefully sended
     msg.channel.send(`la sugerencia esta en <#${config.channels.sugerencias}>`);
     msg
