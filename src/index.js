@@ -14,8 +14,11 @@ const { clearCommand } = require("./commands/clear");
 
 const client = new Discord.Client();
 
-client.on("ready", () => {
+client.on("ready", async () => {
   console.log("I am ready!");
+  await client.user?.setActivity(
+    `Escribe "${config.bot.prefix} help" para obtener ayuda.`
+  ); // establish bot activity
 });
 
 client.on("message", async (msg) => {
@@ -55,6 +58,7 @@ client.on("message", async (msg) => {
 });
 
 client.on("guildMemberAdd", (member) => {
+  member.roles.add(config.roles.invitado)
   const channel = member.guild.channels.cache.find(
     (ch) => ch.id === config.channels.bienvenidas
   );
