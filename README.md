@@ -20,7 +20,7 @@ ban: prefix + ban + USER_BANED
 
 warn: prefix + warn + USER_WARNED
 
-### exaple : `$clear 5`
+### example : `$clear 5`
 
 ---
 
