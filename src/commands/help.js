@@ -12,16 +12,16 @@ const helpCommand = async (msg) => {
         .setTitle("Help")
         .addField("here you will find help for commands", "⬇️⬇️⬇️")
         .setDescription(`prefix: ${config.bot.prefix}`)
-        .addField("$avatar", "will show your avatar")
+        .addField(`${config.bot.prefix}avatar`, "will show your avatar")
         .addField(
-          "$sugerencia",
+          `${config.bot.prefix}sugerencia`,
           `your suggestion will be sended in <#${config.channels.sugerencias}>`
         )
-        .addField("$kick @user", "will kick te member mentioned")
-        .addField("$ban @user", "will ban user mentioned")
-        .addField("$warn @user", "will warn user mentioned")
-        .addField("$advert", `your advert will be sended to <#${config.channels.advertisments}>`)
-        .addField("$clear number", "will clear the number of messages desired")
+        .addField(`${config.bot.prefix}kick @user`, "will kick te member mentioned")
+        .addField(`${config.bot.prefix}ban @user`, "will ban user mentioned")
+        .addField(`${config.bot.prefix}warn @user`, "will warn user mentioned")
+        .addField(`${config.bot.prefix}advert`, `send an stylized embed to advert something`)
+        .addField(`${config.bot.prefix}clear number`, "will clear the number of messages desired")
     );
   } else {
     await msg.channel.send(
