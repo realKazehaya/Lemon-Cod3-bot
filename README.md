@@ -24,7 +24,6 @@ warn: prefix + warn + USER_WARNED
 
 ---
 
-**only works in Stackly Code discord server**
 
 **for moderation commands you must need admin role**
 
