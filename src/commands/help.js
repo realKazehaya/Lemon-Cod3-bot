@@ -21,6 +21,7 @@ const helpCommand = async (msg) => {
         .addField("$ban @user", "will ban user mentioned")
         .addField("$warn @user", "will warn user mentioned")
         .addField("$advert", `your advert will be sended to <#${config.channels.advertisments}>`)
+        .addField("$clear number", "will clear the number of messages desired")
     );
   } else {
     await msg.channel.send(
