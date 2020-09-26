@@ -20,6 +20,8 @@ ban: prefix + ban + USER_BANED
 
 warn: prefix + warn + USER_WARNED
 
+### exaple : `$clear 5`
+
 ---
 
 **only works in Stackly Code discord server**
