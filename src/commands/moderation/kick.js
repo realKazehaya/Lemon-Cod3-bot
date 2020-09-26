@@ -10,14 +10,14 @@ const kickCommand = async (msg) => {
 
     if(msg.member.hasPermission('KICK_MEMBERS')){
         if (!userModed) {
-            msg.reply("procura mencionar a la persona que deseas banear");
+            msg.reply("procura mencionar a la persona que deseas echar");
           }
         userModed.kick()
             .then(() => {
                 msg.channel.send(
                     kEmbed
                 )
-                console.log(`${msg.author} ${userModed} ha sido baneado del servidor`)
+                console.log(`${msg.author} ${userModed} ha sido echado del servidor`)
             }).catch(err => {
                 msg.reply(`No se pudo expulsar a el usuario ${userModed}`);
                 // Log the error
