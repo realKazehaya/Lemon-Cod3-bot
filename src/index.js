@@ -20,12 +20,13 @@ client.on('ready', () => {
 
 
   client.on('message', async msg => {
+    const prefix = msg.content.split(' ').shift().split("").shift()
     const commandArguments = msg.content.split(" ");
-
     let commandName = commandArguments.shift() || config.bot.prefix;
     commandName = commandName.slice(config.bot.prefix.length);
-
-    switch (commandName) {
+    
+    if(prefix === config.bot.prefix){
+      switch (commandName) {
         case 'avatar':
             await AvatarCommand(msg);
             break;
@@ -43,6 +44,7 @@ client.on('ready', () => {
             break;
         case 'advert': 
             await advertisments(msg, commandArguments)
+    }
     }
   });
 
