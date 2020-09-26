@@ -13,7 +13,7 @@ const advertisments = async (msg, args) => {
       (x) => x.id === config.channels.advertisments
     ); //where will go the suggestion
 
-    if (!args) {
+    if (!args || args.length === 0) {
       msg.reply("por favor escribe lo que desees sugerir despues del comando");
     } else if (!aChannel) {
       msg.reply("no se puede encontrar el canal para colocar los anuncios");
