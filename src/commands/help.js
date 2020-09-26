@@ -29,9 +29,9 @@ const helpCommand = async (msg) => {
         .setTitle("Help")
         .addField("here you will find help for commands", "⬇️⬇️⬇️")
         .setDescription("prefix: $")
-        .addField("$avatar", "will show your avatar")
+        .addField(`${config.bot.prefix}avatar`, "will show your avatar")
         .addField(
-          "$sugerencia",
+          `${config.bot.prefix}sugerencia`,
           `your suggestion will be sended in <#${config.channels.sugerencias}>`
         )
     );
