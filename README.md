@@ -24,6 +24,8 @@ If you want to use Stackly Code discord bot code for your own you must follow th
 ---
 <br/>
 
-- you must change roles id and channels id setted in config and some files
+- you must change roles id and channels id in config.js for your own ones
+
+<img src="./READMEImgs/code.png" />
 
 - you must set a .env file in root and there write BOT_TOKEN=YOUR_TOKEN
