@@ -6,7 +6,7 @@ module.exports  = {
     name: 'Stackly Code',
     bot: {
         token: process.env.BOT_TOKEN,
-        prefix: '$',
+        prefix: '!',
         color: {
             primary: '#99B8E0'
         }
