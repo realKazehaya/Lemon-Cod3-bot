@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const config = require("../../config");
 
 const banCommand = async (msg) => {
   const userModed = msg.mentions.members?.first();
@@ -6,7 +7,7 @@ const banCommand = async (msg) => {
     .setAuthor(`${msg.author.username}`, `${msg.author.avatarURL()}`)
     .setTitle("ban")
     .setDescription(
-      `${msg.author} ${userModed} ha sido baneado de Stackly Code`
+      `${msg.author} ${userModed} ha sido baneado de ${config.name}`
     );
   console.log(msg.member.hasPermission("BAN_MEMBERS"));
 
@@ -18,7 +19,7 @@ const banCommand = async (msg) => {
       .ban()
       .then(() => {
         msg.channel.send(kEmbed);
-        console.log(`${msg.author.tag} ${userModed.tag}  ha sido baneado de Stackly Code`);
+        console.log(`${msg.author.tag} ${userModed.tag}  ha sido baneado de ${config.name}`);
       })
       .catch((err) => {
         msg.reply(`No se pudo banear a el usuario ${userModed}`);

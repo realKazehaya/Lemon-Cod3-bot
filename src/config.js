@@ -3,6 +3,7 @@ dotenv.config()
 
 
 module.exports  = {
+    name: 'Stackly Code',
     bot: {
         token: process.env.BOT_TOKEN,
         prefix: '$',
