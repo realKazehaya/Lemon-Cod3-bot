@@ -6,7 +6,9 @@
 ### prefix : $
 <br/>
 
-suggestions -> prefix + sugerencia + YOUR_SUGGESTION
+suggestions: prefix + sugerencia + YOUR_SUGGESTION
+
+advert: prefix + advert + YOUR_ADVERT (**just for admins**)
 
 kick: prefix + kick + USER_KICKED
 
