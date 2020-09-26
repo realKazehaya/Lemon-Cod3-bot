@@ -9,6 +9,7 @@ const { AvatarCommand } = require('./commands/avatar');
 const { kickCommand } = require('./commands/moderation/kick');
 const { banCommand } = require('./commands/moderation/ban');
 const { warnCommand } = require('./commands/moderation/warn');
+const { advertisments } = require('./commands/advertisement');
 
 
 const client = new Discord.Client();
@@ -40,6 +41,8 @@ client.on('ready', () => {
         case 'sugerencia':
             await suggestions(msg, commandArguments)
             break;
+        case 'advert': 
+            await advertisments(msg, commandArguments)
     }
   });
 

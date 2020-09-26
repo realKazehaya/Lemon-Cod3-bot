@@ -11,8 +11,9 @@ module.exports  = {
         }
     },
     channels: {
-        sugerencias: '<#759174827717689394>',
-        bienvenidas: '<#756955213591740547>'
+        sugerencias: '759174827717689394',
+        bienvenidas: '756955213591740547',
+        advertisments: '756623887453913122'
     },
     roles: {
         warning: '759173208045387838',

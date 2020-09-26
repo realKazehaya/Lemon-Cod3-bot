@@ -6,15 +6,14 @@ const suggestions = async (msg, args) => {
 
     //we say to the user that his message was suscefully sended
     msg.channel
-    .send(`la sugerencia esta en ${config.channels.sugerencias}`)
+    .send(`la sugerencia esta en <#${config.channels.sugerencias}>`)
     msg.delete({ timeout: 1000 })//we remove the command message
-    .then(msg => console.log(`Deleted message from ${msg.author.username} after 5 seconds`))
     .catch(console.error);
 
     const sEmbed = new MessageEmbed()
       .setTimestamp()
       .addField(`nueva sugerencia hecha por:`, `**${msg.author.tag}**`)
-      .addField(`sugerencia:`, `${args}\n`)
+      .addField(`sugerencia:`, `${args.join(' ')}\n`)
       .setColor('RED');
       sChannel.send(sEmbed).then( message => {
         message.react("👍");
