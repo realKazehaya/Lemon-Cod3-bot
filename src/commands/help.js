@@ -11,7 +11,7 @@ const helpCommand = async (msg) => {
       new MessageEmbed()
         .setTitle("Help")
         .addField("here you will find help for commands", "⬇️⬇️⬇️")
-        .setDescription("prefix: $")
+        .setDescription(`prefix: ${config.bot.prefix}`)
         .addField("$avatar", "will show your avatar")
         .addField(
           "$sugerencia",
