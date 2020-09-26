@@ -4,9 +4,10 @@ const config = require("../config");
 const advertisments = async (msg, args) => {
   const sEmbed = new MessageEmbed()
     .setTimestamp()
-    .setTitle(`**${msg.author.tag}**`)
+    .setTitle(`📢 Anuncio:`)
     .setDescription(`${args.join(" ")}`)
-    .setColor(config.bot.color.primary);
+    .setColor(config.bot.color.primary)
+    .setFooter(`**${msg.author.tag}**`)
 
   if (msg.member.hasPermission("ADMINISTRATOR")) {
     msg.delete({timeout: 1000})
