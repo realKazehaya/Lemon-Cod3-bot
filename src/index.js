@@ -10,6 +10,7 @@ const { banCommand } = require("./commands/moderation/ban");
 const { warnCommand } = require("./commands/moderation/warn");
 const { advertisments } = require("./commands/advertisement");
 const { helpCommand } = require("./commands/help");
+const { clearCommand } = require("./commands/clear");
 
 const client = new Discord.Client();
 
@@ -42,6 +43,9 @@ client.on("message", async (msg) => {
         break;
       case "advert":
         await advertisments(msg, commandArguments);
+        break;
+      case 'clear':
+        await clearCommand(msg, commandArguments);
         break;
       case "help":
         await helpCommand(msg);
