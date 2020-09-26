@@ -5,7 +5,7 @@ const advertisments = async (msg, args) => {
   const sEmbed = new MessageEmbed()
     .setTimestamp()
     .setTitle(`**${msg.author.tag}**`)
-    .setDescription(`${args.join(' ')}`)
+    .setDescription(`${args.join(" ")}`)
     .setColor(config.bot.color.primary);
 
   if (msg.member.hasPermission("ADMINISTRATOR")) {
@@ -13,6 +13,11 @@ const advertisments = async (msg, args) => {
       (x) => x.id === config.channels.advertisments
     ); //where will go the suggestion
 
+    if (!args) {
+      msg.reply("por favor escribe lo que desees sugerir despues del comando");
+    } else if (!aChannel) {
+      msg.reply("no se puede encontrar el canal para colocar los anuncios");
+    }
     //we say to the user that his message was suscefully sended
     msg.channel.send(`el anuncio esta en <#${config.channels.advertisments}>`);
     msg
