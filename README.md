@@ -33,6 +33,8 @@ warn: prefix + warn + USER_WARNED
 
 <br/>
 
+- First fork this project, then git clone your fork and open in your text editor or ide
+
 - You must have node installed as minimum version 12.
 
 <img src="./READMEImgs/code2.png" width="300"/>
