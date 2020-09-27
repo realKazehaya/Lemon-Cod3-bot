@@ -3,26 +3,26 @@ dotenv.config()
 
 
 module.exports  = {
-    name: 'Stackly Code',
+    name: 'Lemon Code',
     bot: {
         token: process.env.BOT_TOKEN,
-        prefix: '!',
+        prefix: '$',
         color: {
-            primary: '#99B8E0'
+            primary: '#FBD569'
         }
     },
     channels: {
-        sugerencias: '759174827717689394',
-        bienvenidas: '756955213591740547',
-        advertisments: '756623887453913122'
+        sugerencias: '756655269106286633', // ...
+        bienvenidas: '756539206058246326', // ...
+        advertisments: '756997817742131211' //..
     },
     roles: {
-        warning: '759173208045387838',
-        admin: '759173208045387838',
-        invitado: '759085567874039909',
-        everyone: '756623887453913119'
-    },
+        warning: '757755882875387967', //..
+        admin: '755532940120817676', //..
+        invitado: false,
+        everyone: '725468758923018381' //..
+    },  
     categories:{
-        SOPORTE: '759514199847469087'
+        SOPORTE: '759561861154471967' //...
     }
 }

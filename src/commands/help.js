@@ -10,6 +10,7 @@ const helpCommand = async (msg) => {
     await msg.channel.send(
       new MessageEmbed()
         .setTitle("Help")
+        .setColor(`${config.bot.color.primary}`)
         .addField("here you will find help for commands", "⬇️⬇️⬇️")
         .setDescription(`prefix: ${config.bot.prefix}`)
         .addField(`${config.bot.prefix}avatar`, "will show your avatar")
@@ -28,6 +29,7 @@ const helpCommand = async (msg) => {
     await msg.channel.send(
       new MessageEmbed()
         .setTitle("Help")
+        .setColor(`${config.bot.color.primary}`)
         .addField("here you will find help for commands", "⬇️⬇️⬇️")
         .setDescription("prefix: $")
         .addField(`${config.bot.prefix}avatar`, "will show your avatar")
