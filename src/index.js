@@ -57,6 +57,9 @@ client.on("message", async (msg) => {
       case "help":
         await helpCommand(msg);
         break;
+      case "say":
+        await sayCommand(msg);
+        break;
     }
   }
 });
