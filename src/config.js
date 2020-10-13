@@ -5,7 +5,7 @@ dotenv.config()
 module.exports  = {
     name: 'Lemon Code',
     bot: {
-        token: process.env.BOT_TOKEN,
+        token: process.env.TOKEN,
         prefix: '$',
         color: {
             primary: '#FBD569'
