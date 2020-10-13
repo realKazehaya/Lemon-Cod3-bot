@@ -10,6 +10,7 @@ const { banCommand } = require("./commands/moderation/ban");
 const { warnCommand } = require("./commands/moderation/warn");
 const { advertisments } = require("./commands/advertisement");
 const { helpCommand } = require("./commands/help");
+const { sayCommand } = require("./commands/say");
 const { clearCommand } = require("./commands/clear");
 const { supportCommand } = require("./commands/tickets/support");
 
