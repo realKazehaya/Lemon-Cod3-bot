@@ -9,6 +9,8 @@ const { kickCommand } = require("./commands/moderation/kick");
 const { banCommand } = require("./commands/moderation/ban");
 const { warnCommand } = require("./commands/moderation/warn");
 const { advertisments } = require("./commands/advertisement");
+const { sayCommand } = require("./commands/say");
+const { serverinfoCommand } = require("./commands/serverinfo");
 const { helpCommand } = require("./commands/help");
 const { clearCommand } = require("./commands/clear");
 const { supportCommand } = require("./commands/tickets/support");
@@ -16,10 +18,10 @@ const { supportCommand } = require("./commands/tickets/support");
 const client = new Discord.Client();
 
 client.on("ready", async () => {
-  console.log("I am ready!");
+  console.log("Encendiendo...");
   await client.user?.setActivity(
     `Escribe "${config.bot.prefix} help" para obtener ayuda.`
-  ); // establish bot activity
+  );
 });
 
 client.on("message", async (msg) => {
@@ -50,6 +52,12 @@ client.on("message", async (msg) => {
         break;
       case "advert":
         await advertisments(msg, commandArguments);
+        break;
+      case "say":
+        await sayCommand(msg, commandArguments);
+        break;
+      case "serverinfo":
+        await serverinfoCommand(msg, commandArguments);
         break;
       case 'clear':
         await clearCommand(msg, commandArguments);
