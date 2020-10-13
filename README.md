@@ -47,6 +47,6 @@ support: prefix + support -> you will have to click in the reaction of the asnwe
 
 <img src="./READMEImgs/code.png" />
 
-- You must set a .env file in root and there write BOT_TOKEN=YOUR_TOKEN
+- You must set a .env file in root and there write TOKEN=BOT_TOKEN
 
 - Run Command ```$ npm run dev``` to run bot in your local
