@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const config = require("../config");
 
-const sayCommand = async (msg, args) => {
+const serverinfoCommand = async (msg, args) => {
 var server = message.guild;
   
 const embed = new Discord.MessageEmbed()
@@ -17,4 +17,4 @@ const embed = new Discord.MessageEmbed()
     
 message.channel.send(embed);
 
-exports.sayCommand = sayCommand
+exports.serverinfoCommand = serverinfoCommand
