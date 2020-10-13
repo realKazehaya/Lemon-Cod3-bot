@@ -17,4 +17,4 @@ const embed = new Discord.MessageEmbed()
     
 message.channel.send(embed);
 
-exports.say = sayCommand
+exports.sayCommand = sayCommand
