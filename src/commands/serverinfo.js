@@ -1,3 +1,7 @@
+const { MessageEmbed } = require("discord.js");
+const config = require("../config");
+
+const sayCommand = async (msg, args) => {
 var server = message.guild;
   
 const embed = new Discord.MessageEmbed()
@@ -12,3 +16,5 @@ const embed = new Discord.MessageEmbed()
 .setColor(0x66b3ff)
     
 message.channel.send(embed);
+
+exports.say = sayCommand
